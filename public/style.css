@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#hamburger {
+  @apply flex h-8 w-8 cursor-pointer flex-col justify-center space-y-1;
+}
+
+#hamburger.open .hamburger-line.top {
+  @apply translate-y-1 rotate-45 duration-200;
+}
+
+#hamburger.open .hamburger-line.bot {
+  @apply -translate-y-1 -rotate-45 duration-200;
+}
+
+#hamburger.open .hamburger-line.mid {
+  @apply hidden duration-200;
+}
+
+.hamburger-line {
+  @apply h-1 w-8 rounded bg-gray-600 duration-200;
+}
+
+.nav-item {
+  @apply w-full px-3 py-4 font-semibold uppercase duration-200 hover:bg-slate-200;
+}
+
+.btn {
+  @apply rounded-sm shadow-md;
+}
