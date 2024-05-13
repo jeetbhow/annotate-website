@@ -46,7 +46,7 @@
       </nav>
     </header>
 
-    <!-- Hero Page -->
+    <!-- Hero Section -->
     <section id="hero">
       <div class="container mx-auto h-screen p-6">
         <img
@@ -61,14 +61,10 @@
           Highlight, comment, and share your thoughts directly on any website.
         </h2>
         <div class="flex flex-col space-y-4 md:flex-row md:space-y-0">
-          <button
-            class="btn hover bg-indigo-600 px-6 py-4 font-semibold text-stone-200"
-          >
+          <button class="btn bg-indigo-600 font-semibold text-stone-200">
             Get on Chrome
           </button>
-          <button class="btn bg-gray-300 px-6 py-4 font-semibold">
-            Get on Firefox
-          </button>
+          <button class="btn bg-gray-300 font-semibold">Get on Firefox</button>
         </div>
       </div>
     </section>
@@ -89,12 +85,12 @@
           <button class="tab" key="customization">Customization</button>
         </div>
 
-        <!-- Features Content -->
+        <!-- Features Section -->
         <div>
           <div class="panel" key="integration">
             <img src="../images/browser.svg" class="my-20" />
-            <h3>Effortless Browsing Meets Powerful Annotation</h3>
-            <p>
+            <h3 class="my-4">Effortless Browsing Meets Powerful Annotation</h3>
+            <p class="my-4">
               Our browser extension is engineered to blend seamlessly with your
               everyday browsing. Without altering your browsing speed or
               behaviour, it integrates directly into your browser, ensuring that
@@ -104,8 +100,8 @@
           </div>
           <div class="panel hidden" key="collaboration">
             <img src="../images/team.svg" class="my-20" />
-            <h3>Enhance Teamwork with Shared Annotations</h3>
-            <p>
+            <h3 class="my-4">Enhance Teamwork with Shared Annotations</h3>
+            <p class="my-4">
               Whether you’re working on a group project, conducting joint
               research, or just sharing interesting finds, our extension’s
               collaborative features make it simple and efficient. Share your
@@ -115,8 +111,8 @@
           </div>
           <div class="panel hidden" key="customization">
             <img src="../images/paint.svg" class="my-20" />
-            <h3>Your Annotations, Your Way</h3>
-            <p>
+            <h3 class="my-4">Your Annotations, Your Way</h3>
+            <p class="my-4">
               Customize how you highlight and annotate web pages to suit your
               style and needs. With a variety of tools and styles at your
               disposal, our extension makes it easy to emphasize and organize
@@ -127,9 +123,55 @@
       </div>
     </section>
 
-    <section>
+    <!-- Download Section -->
+    <section id="download">
       <div class="container mx-auto p-6 text-center">
-        <h3>Download</h3>
+        <h3 class="mb-5">Download</h3>
+        <p class="mb-16">Download the extension on your browser of choice.</p>
+
+        <!-- Download Cards-->
+        <div class="flex flex-col space-y-10">
+          <div class="download-card">
+            <img src="../images/chrome.svg" width="64" class="my-2" />
+            <h4 class="my-4">Chrome</h4>
+            <p class="my-4 text-sm">Minimum version 51</p>
+            <button
+              class="btn rounded-sm bg-red-400 font-semibold text-slate-50"
+            >
+              Add extension
+            </button>
+          </div>
+          <div class="download-card">
+            <img src="../images/edge.svg" width="64" class="my-2" />
+            <h4 class="my-4">Edge</h4>
+            <p class="my-4 text-sm">Minimum version 15</p>
+            <button
+              class="btn rounded-sm bg-red-400 font-semibold text-slate-50"
+            >
+              Add extension
+            </button>
+          </div>
+          <div class="download-card">
+            <img src="../images/firefox.svg" width="64" class="my-2" />
+            <h4 class="my-4">Firefox</h4>
+            <p class="my-4 text-sm">Minimum version 54</p>
+            <button
+              class="btn rounded-sm bg-red-400 font-semibold text-slate-50"
+            >
+              Add extension
+            </button>
+          </div>
+          <div class="download-card">
+            <img src="../images/opera.svg" width="64" class="my-2" />
+            <h4 class="my-4">Opera</h4>
+            <p class="my-4 text-sm">Minimum version 38</p>
+            <button
+              class="btn rounded-sm bg-red-400 font-semibold text-slate-50"
+            >
+              Add extension
+            </button>
+          </div>
+        </div>
       </div>
     </section>
 
