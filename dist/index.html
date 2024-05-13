@@ -13,7 +13,7 @@
   <body class="bg-slate-50 font-raleway">
     <!-- Header -->
     <header>
-      <div class="container mx-auto mb-10 flex items-center justify-between p-6">
+      <div class="container mx-auto flex items-center justify-between p-6">
         <!-- Logo -->
         <div class="flex items-center space-x-4">
           <img src="/notes.edc9cce4.svg" width="32">
@@ -41,13 +41,14 @@
       </nav>
     </header>
 
+    <!-- Hero Page -->
     <section id="hero">
-      <div class="container mx-auto p-6">
+      <div class="container mx-auto h-screen p-6">
         <img src="/hero-image.d0a79577.svg" alt="man putting up notes on a wall" class="mb-12">
-        <h1 class="mb-4 text-4xl font-bold text-zinc-600">
+        <h1 class="mb-4 text-6xl font-bold text-zinc-700 drop-shadow-xl">
           Annotate Any Webpage Instantly!
         </h1>
-        <h2 class="mb-8 text-2xl font-medium text-slate-500">
+        <h2 class="mb-8 text-3xl font-medium text-slate-600 drop-shadow-lg">
           Highlight, comment, and share your thoughts directly on any website.
         </h2>
         <div class="flex flex-col space-y-4 md:flex-row md:space-y-0">
@@ -58,6 +59,66 @@
             Get on Firefox
           </button>
         </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+      <div class="container mx-auto p-6 text-center">
+        <h1 class="text-slate mb-10 text-4xl font-bold text-zinc-700">
+          Features
+        </h1>
+
+        <!-- Features Tabs -->
+        <div class="flex flex-col">
+          <button class="tab" key="integration" active="">
+            Seamless Integration
+          </button>
+          <button class="tab" key="collaboration">Collaboration</button>
+          <button class="tab" key="customization">Customization</button>
+        </div>
+
+        <!-- Features Content -->
+        <div>
+          <div class="panel" key="integration">
+            <img src="/browser.2b4ae92c.svg" class="my-20">
+            <h3>Effortless Browsing Meets Powerful Annotation</h3>
+            <p>
+              Our browser extension is engineered to blend seamlessly with your
+              everyday browsing. Without altering your browsing speed or
+              behaviour, it integrates directly into your browser, ensuring that
+              powerful annotation tools are always at your fingertips, whenever
+              you need them.
+            </p>
+          </div>
+          <div class="panel hidden" key="collaboration">
+            <img src="/team.4af48008.svg" class="my-20">
+            <h3>Enhance Teamwork with Shared Annotations</h3>
+            <p>
+              Whether you’re working on a group project, conducting joint
+              research, or just sharing interesting finds, our extension’s
+              collaborative features make it simple and efficient. Share your
+              annotations with anyone to foster better communication and
+              teamwork.
+            </p>
+          </div>
+          <div class="panel hidden" key="customization">
+            <img src="/paint.8bbabb1c.svg" class="my-20">
+            <h3>Your Annotations, Your Way</h3>
+            <p>
+              Customize how you highlight and annotate web pages to suit your
+              style and needs. With a variety of tools and styles at your
+              disposal, our extension makes it easy to emphasize and organize
+              the information that matters most to you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container mx-auto p-6 text-center">
+        <h3>Download</h3>
       </div>
     </section>
 
