@@ -1,101 +1,112 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <title>Annotate</title>
-  </head>
 
-  <body class="bg-slate-50 font-raleway">
-    <!-- Header -->
-    <header>
-      <div class="container mx-auto flex items-center justify-between p-6">
-        <!-- Logo -->
-        <div class="flex items-center space-x-4">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <title>AnnotateMe</title>
+</head>
+
+<body class="bg-slate-50 font-raleway">
+  <!-- Header -->
+  <header>
+    <div class="container mx-auto flex flex-col items-center p-6 md:flex-row">
+      <!-- Logo -->
+      <div class="flex w-full flex-row justify-between">
+        <div class="flex flex-row items-center space-x-4">
           <img src="../images/notes.svg" width="32" />
-          <h4 class="font-semibold">Annotate</h4>
+          <h4 class="font-semibold">AnnotateMe</h4>
         </div>
 
         <!-- Hamburger Icon -->
-        <div id="hamburger" class="">
-          <div class="hamburger-line top"></div>
-          <div class="hamburger-line mid"></div>
-          <div class="hamburger-line bot"></div>
+        <div id="hamburger">
+          <div class="hamburger-line top md:hidden"></div>
+          <div class="hamburger-line mid md:hidden"></div>
+          <div class="hamburger-line bot md:hidden"></div>
         </div>
       </div>
 
       <!-- Navigation Menu -->
-      <nav class="hidden">
-        <ul class="flex flex-col space-y-2 text-center text-zinc-400">
-          <a href="#features"  class="nav-item">Features</>
-          <a href="#download" class="nav-item">Download</>
-          <a href="#faq" class="nav-item">FAQs</>
-          <a class="nav-item">Login</>
+      <nav class="hidden md:block">
+        <ul class="flex flex-col space-y-2 text-center mt-16 text-zinc-400 md:mt-0 md:flex-row md:space-y-0">
+          <a href="#features" class="nav-item border-b md:border-none">Features</a>
+          <a href="#download" class="nav-item border-b md:border-none">Download</a>
+          <a href="#faq" class="nav-item">FAQs</a>
         </ul>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-      <div class="container mx-auto md:h-screen p-6">
-        <img
-          src="../images/hero-image.svg"
-          alt="man putting up notes on a wall"
-          class="mb-12"
-        />
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="container mx-auto flex flex-col items-center p-6 my-32 lg:flex-row-reverse lg:justify-between">
+      <img src="../images/hero-image.svg" alt="man putting up notes on a wall" class="container max-w-xl" />
+      <div class="max-w-lg">
         <h1 class="mb-4 text-6xl font-bold text-zinc-700 drop-shadow-xl">
           Annotate Any Webpage Instantly!
         </h1>
         <h2 class="mb-8 text-3xl font-medium text-slate-600 drop-shadow-lg">
           Highlight, comment, and share your thoughts directly on any website.
         </h2>
-        <div class="flex flex-col space-y-4 md:flex-row md:space-y-0">
+        <div class="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
           <button class="btn bg-indigo-600 font-semibold text-stone-200">
             Get on Chrome
           </button>
-          <button class="btn bg-gray-300 font-semibold">Get on Firefox</button>
+          <button class="btn bg-gray-300 font-semibold">
+            Get on Firefox
+          </button>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Features Section -->
-    <section id="features">
-      <div class="container mx-auto p-6 text-center">
-        <h1 class="text-slate mb-10 text-4xl font-bold text-zinc-700">
-          Features
-        </h1>
+  <!-- Features Section -->
+  <section id="features">
+    <div class="container mx-auto p-6 text-center">
+      <h3 class="mb-4">
+        Features
+      </h3>
+      <p class="mx-auto mb-10 max-w-lg">
+        Welcome to AnnotateEase, the browser extension that transforms the way
+        you interact with the web. With AnnotateEase, you can effortlessly
+        highlight, comment, and share your thoughts on any webpage. Whether
+        you’re a student, researcher, or just a web enthusiast, AnnotateEase
+        makes it easy to keep track of important information and collaborate
+        with others.
+      </p>
 
-        <!-- Features Tabs -->
-        <div class="flex flex-col">
-          <button class="tab" key="integration" active>
-            Seamless Integration
-          </button>
-          <button class="tab" key="collaboration">Collaboration</button>
-          <button class="tab" key="customization">Customization</button>
-        </div>
+      <!-- Features Tabs -->
+      <div class="mb-24 flex flex-col md:flex-row">
+        <button class="tab" key="integration" active>
+          Seamless Integration
+        </button>
+        <button class="tab" key="collaboration">Collaboration</button>
+        <button class="tab" key="customization">Customization</button>
+      </div>
 
-        <!-- Features Section -->
-        <div>
-          <div class="panel" key="integration">
-            <img src="../images/browser.svg" class="my-20" />
-            <h3 class="my-4">Effortless Browsing Meets Powerful Annotation</h3>
-            <p class="my-4">
-              Our browser extension is engineered to blend seamlessly with your
-              everyday browsing. Without altering your browsing speed or
-              behaviour, it integrates directly into your browser, ensuring that
-              powerful annotation tools are always at your fingertips, whenever
-              you need them.
+      <!-- Features Section -->
+      <div>
+        <div class="panel flex flex-col items-center my-32 space-y-4 lg:flex-row lg:space-y-0" key="integration">
+          <img src="../images/browser.svg" class="lg:max-w-lg xl:max-w-full" />
+          <div>
+            <h3>Effortless Browsing Meets Powerful Annotation</h3>
+            <p>
+              Our browser extension is engineered to blend seamlessly with
+              your everyday browsing. Without altering your browsing speed or
+              behaviour, it integrates directly into your browser, ensuring
+              that powerful annotation tools are always at your fingertips,
+              whenever you need them.
             </p>
           </div>
-          <div class="panel hidden" key="collaboration">
-            <img src="../images/team.svg" class="my-20" />
+        </div>
+        <div class="panel flex flex-col items-center space-y-4 lg:flex-row lg:space-y-0 hidden" key="collaboration">
+          <img src="../images/team.svg" class="lg:max-w-lg xl:max-w-full" />
+          <div>
             <h3 class="my-4">Enhance Teamwork with Shared Annotations</h3>
             <p class="my-4">
               Whether you’re working on a group project, conducting joint
@@ -103,218 +114,181 @@
               collaborative features make it simple and efficient. Share your
               annotations with anyone to foster better communication and
               teamwork.
-            </p>
           </div>
-          <div class="panel hidden" key="customization">
-            <img src="../images/paint.svg" class="my-20" />
+          </p>
+        </div>
+        <div class="panel flex flex-col items-center space-y-4 lg:flex-row lg:space-y-0 hidden" key="customization">
+          <img src="../images/paint.svg" class="lg:max-w-lg xl:max-w-full" />
+          <div>
             <h3 class="my-4">Your Annotations, Your Way</h3>
             <p class="my-4">
               Customize how you highlight and annotate web pages to suit your
               style and needs. With a variety of tools and styles at your
               disposal, our extension makes it easy to emphasize and organize
               the information that matters most to you.
-            </p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Download Section -->
-    <section id="download">
-      <div class="container mx-auto mb-24 p-6 text-center">
-        <h3 class="mb-5">Download</h3>
-        <p class="mb-16">Download the extension on your browser of choice.</p>
-
-        <!-- Download Cards-->
-        <div class="flex flex-col space-y-10">
-          <div class="download-card">
-            <img src="../images/chrome.svg" width="64" class="my-2" />
-            <h4 class="my-4">Chrome</h4>
-            <p class="my-4 text-sm">Minimum version 51</p>
-            <button
-              class="btn rounded-sm bg-indigo-500 font-semibold text-slate-50"
-            >
-              Add extension
-            </button>
-          </div>
-          <div class="download-card">
-            <img src="../images/edge.svg" width="64" class="my-2" />
-            <h4 class="my-4">Edge</h4>
-            <p class="my-4 text-sm">Minimum version 15</p>
-            <button
-              class="btn rounded-sm bg-indigo-500 font-semibold text-slate-50"
-            >
-              Add extension
-            </button>
-          </div>
-          <div class="download-card">
-            <img src="../images/firefox.svg" width="64" class="my-2" />
-            <h4 class="my-4">Firefox</h4>
-            <p class="my-4 text-sm">Minimum version 54</p>
-            <button
-              class="btn rounded-sm bg-indigo-500 font-semibold text-slate-50"
-            >
-              Add extension
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQs Section-->
-
-    <section id="faq" class="container mx-auto p-6">
-      <h3 class="mb-16 text-center">FAQs</h3>
-      <!-- Accordion -->
-      <div class="accordion flex flex-col space-y-6">
-        <!-- Accordion Tab 1-->
-        <div class="accordion-item">
-          <div
-            class="accordion-header group flex flex-row items-center justify-between"
-          >
-            <p class="duration-200 group-hover:text-orange-600">
-              Is the extension free?
-            </p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-chevron-right duration-200 group-hover:text-orange-600"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
-              />
-            </svg>
-          </div>
-          <p class="mb-10 hidden">
-            Yes, the basic version of our extension is free to use. We also
-            offer a premium version with additional features and storage
-            options.
-          </p>
-        </div>
-        <!-- Accordion Tab 2-->
-        <div class="accordion-item">
-          <div
-            class="accordion-header group flex flex-row items-center justify-between"
-          >
-            <p class="duration-200 group-hover:text-orange-600">
-              Is my data secure?
-            </p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-chevron-right duration-200 group-hover:text-orange-600"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
-              />
-            </svg>
-          </div>
-          <p class="mb-10 hidden">
-            We take your privacy and data security very seriously. All your
-            annotations are stored securely, and we do not share your data with
-            third parties without your consent.
-          </p>
-        </div>
-        <!-- Accordion Tab 3-->
-        <div class="accordion-item">
-          <div
-            class="accordion-header group flex flex-row items-center justify-between"
-          >
-            <p class="duration-200 group-hover:text-orange-600">
-              What browsers are supported?
-            </p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-chevron-right duration-200 group-hover:text-orange-600"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
-              />
-            </svg>
-          </div>
-          <p class="mb-10 hidden">
-            Our extension is compatible with Chrome, Firefox, and Edge. We are
-            working on expanding support to other browsers as well.
-          </p>
-        </div>
-        <!-- Accordion Tab 4-->
-        <div class="accordion-item">
-          <div
-            class="accordion-header group flex flex-row items-center justify-between"
-          >
-            <p class="duration-200 group-hover:text-orange-600">
-              Who can I contact for support?
-            </p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-chevron-right duration-200 group-hover:text-orange-600"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
-              />
-            </svg>
-          </div>
-          <p class="mb-10 hidden">
-            If you have any questions or need assistance, you can contact our
-            support team at annotateme@support.com. We're here to help!
           </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="newsletter" class="bg-indigo-600">
-      <div class="flex flex-col container mx-auto py-20">
-        <div>
-          <p class="text-zinc-100 text-center mb-2">35000+ Users</p>
-          <h3 class="text-zinc-200 text-center mb-3">Get the latest news and updates</h3>
+  <!-- Download Section -->
+  <section id="download">
+    <div class="mx-auto mb-24 max-w-6xl p-6 my-32 text-center">
+      <h3 class="mb-5">Download</h3>
+      <p class="mb-16">Download the extension on your browser of choice.</p>
+
+      <!-- Download Cards-->
+      <div class="flex flex-col space-y-10 md:flex-row md:space-y-0 ">
+        <div class="download-card">
+          <img src="../images/chrome.svg" width="64" class="my-2" />
+          <h4 class="my-4">Chrome</h4>
+          <p class="my-4 text-sm">Minimum version 51</p>
+          <button class="btn rounded-sm bg-indigo-500 font-semibold text-slate-50">
+            Add extension
+          </button>
         </div>
-        <form class="flex flex-col items-center space-y-4 pb-6">
-          <input class="py-2 px-6 rounded-md" placeholder="Email" type="email">
-          <button class="bg-red-500 text-slate-50 py-2 px-6 rounded-md font-medium hover:bg-red-700 duration-200" type="button">Submit</button>
-        </form>
+        <div class="download-card">
+          <img src="../images/edge.svg" width="64" class="my-2" />
+          <h4 class="my-4">Edge</h4>
+          <p class="my-4 text-sm">Minimum version 15</p>
+          <button class="btn rounded-sm bg-indigo-500 font-semibold text-slate-50">
+            Add extension
+          </button>
+        </div>
+        <div class="download-card">
+          <img src="../images/firefox.svg" width="64" class="my-2" />
+          <h4 class="my-4">Firefox</h4>
+          <p class="my-4 text-sm">Minimum version 54</p>
+          <button class="btn rounded-sm bg-indigo-500 font-semibold text-slate-50">
+            Add extension
+          </button>
+        </div>
       </div>
+    </div>
+  </section>
 
-    </section>
+  <!-- FAQs Section-->
 
-    <!-- Footer -->
-    <footer class="bg-indigo-900">
-      <div class="container flex flex-col mx-auto space-y-4 py-6">
-        <div class="flex flex-row items-center justify-center space-x-4">
-          <img src="../images/notes-white.svg" width="32" />
-          <h4 class="font-semibold text-slate-50">AnnotateMe</h4>
-        </div>
-        <p class="uppercase text-zinc-300 font-medium text-center cursor-pointer">Features</p>
-        <p class="uppercase text-zinc-300 font-medium text-center cursor-pointer">Pricing</p>
-        <p class="uppercase text-zinc-300 font-medium text-center cursor-pointer">Contact</p>
-        <div class="flex flex-row justify-center items-center space-x-2 py-16">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-zinc-100" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-zinc-100" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+  <section id="faq" class="container mx-auto p-6 my-32 max-w-2xl">
+    <h3 class="mb-16 text-center">FAQs</h3>
+    <!-- Accordion -->
+    <div class="accordion flex flex-col space-y-6">
+      <!-- Accordion Tab 1-->
+      <div class="accordion-item">
+        <div class="accordion-header group flex flex-row items-center justify-between">
+          <p class="duration-200 group-hover:text-orange-600">
+            Is the extension free?
+          </p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-chevron-right duration-200 group-hover:text-orange-600" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
           </svg>
         </div>
+        <p class="mb-10 hidden">
+          Yes, the basic version of our extension is free to use. We also
+          offer a premium version with additional features and storage
+          options.
+        </p>
       </div>
-    </footer>
+      <!-- Accordion Tab 2-->
+      <div class="accordion-item">
+        <div class="accordion-header group flex flex-row items-center justify-between">
+          <p class="duration-200 group-hover:text-orange-600">
+            Is my data secure?
+          </p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-chevron-right duration-200 group-hover:text-orange-600" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+          </svg>
+        </div>
+        <p class="mb-10 hidden">
+          We take your privacy and data security very seriously. All your
+          annotations are stored securely, and we do not share your data with
+          third parties without your consent.
+        </p>
+      </div>
+      <!-- Accordion Tab 3-->
+      <div class="accordion-item">
+        <div class="accordion-header group flex flex-row items-center justify-between">
+          <p class="duration-200 group-hover:text-orange-600">
+            What browsers are supported?
+          </p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-chevron-right duration-200 group-hover:text-orange-600" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+          </svg>
+        </div>
+        <p class="mb-10 hidden">
+          Our extension is compatible with Chrome, Firefox, and Edge. We are
+          working on expanding support to other browsers as well.
+        </p>
+      </div>
+      <!-- Accordion Tab 4-->
+      <div class="accordion-item">
+        <div class="accordion-header group flex flex-row items-center justify-between">
+          <p class="duration-200 group-hover:text-orange-600">
+            Who can I contact for support?
+          </p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-chevron-right duration-200 group-hover:text-orange-600" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+          </svg>
+        </div>
+        <p class="mb-10 hidden">
+          If you have any questions or need assistance, you can contact our
+          support team at annotateme@support.com. We're here to help!
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <script src="../index.js" defer />
-  </body>
+  <section id="newsletter" class="bg-indigo-600">
+    <div class="container mx-auto flex flex-col py-20">
+      <div>
+        <p class="mb-2 text-center text-zinc-100">35000+ Users</p>
+        <h3 class="mb-3 text-center text-zinc-200">
+          Get the latest news and updates
+        </h3>
+      </div>
+      <form class="flex flex-col items-center space-y-4 pb-6 md:flex-row md:space-y-0 mx-auto md:space-x-4">
+        <input class="rounded-md px-6 py-2" placeholder="Email" type="email" />
+        <button class="rounded-md bg-red-500 px-6 py-2 font-medium text-slate-50 duration-200 hover:bg-red-700"
+          type="button">
+          Submit
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-900">
+    <div class="container mx-auto py-6 px-6 flex flex-col justify-between items-center space-y-4 md:flex-row md:space-y-0">
+      <div class="flex flex-row items-center space-x-4">
+        <img src="../images/notes-white.svg" width="32" />
+        <h4 class="font-semibold text-slate-50">AnnotateMe</h4>
+      </div>
+      <div class="flex flex-row items-center justify-center space-x-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-zinc-100 cursor-pointer" fill="currentColor"
+          class="bi bi-facebook" viewBox="0 0 16 16">
+          <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-zinc-100 cursor-pointer" fill="currentColor"
+          class="bi bi-twitter" viewBox="0 0 16 16">
+          <path
+            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+        </svg>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../index.js" defer />
+</body>
+
 </html>

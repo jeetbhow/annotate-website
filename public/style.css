@@ -35,7 +35,7 @@ p {
 }
 
 .nav-item {
-  @apply w-full px-3 py-4 font-semibold uppercase duration-200 hover:bg-slate-200;
+  @apply px-3 py-4 font-semibold uppercase duration-200 hover:bg-slate-200;
 }
 
 .btn {
