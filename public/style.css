@@ -39,7 +39,11 @@ p {
 }
 
 .btn {
-  @apply rounded-lg px-6 py-4 shadow-md;
+  @apply rounded-lg px-6 py-4 shadow-md duration-200;
+}
+
+.btn:hover {
+  @apply opacity-80;
 }
 
 .tab {
@@ -51,5 +55,33 @@ p {
 }
 
 .download-card {
-  @apply mx-auto flex flex-col items-center rounded-lg p-10 shadow-md;
+  @apply mx-auto flex flex-col items-center rounded-lg bg-white p-10 shadow-md;
+}
+
+.accordion-button[active] {
+  @apply rotate-90 text-orange-600 duration-200;
+}
+
+.accordion-button {
+  @apply cursor-pointer duration-200;
+}
+
+.accordion-item div {
+  @apply mb-2 cursor-pointer border-b;
+}
+
+.accordion-header[active] > svg {
+  @apply rotate-90 duration-200;
+}
+
+.accordion-header[active] > * {
+  @apply text-orange-600;
+}
+
+.accordion-header > svg {
+  @apply duration-200;
+}
+
+.accordion-item > p {
+  @apply text-sm;
 }

@@ -1,5 +1,6 @@
 const tabs = document.getElementsByClassName("tab");
 const panels = document.getElementsByClassName("panel");
+const accordionHeaders = document.getElementsByClassName("accordion-header");
 const hamburger = document.getElementById("hamburger");
 const nav = document.querySelector("nav");
 
@@ -8,9 +9,31 @@ for (const tab of tabs) {
   tab.addEventListener("click", handleTabClick);
 }
 
+for (const header of accordionHeaders) {
+  header.addEventListener("click", handleAccordionClick);
+}
+
 /**
  * Event Handlers
  */
+
+function handleAccordionClick(e) {
+  // Set all accordion items to inactive.
+  for (const header of accordionHeaders) {
+    if (header !== e.currentTarget) {
+      header.removeAttribute("active");
+      const parent = header.parentElement;
+      const content = parent.querySelector(":scope > p");
+      content.classList.add("hidden");
+    }
+  }
+
+  // Toggle the current item
+  e.currentTarget.toggleAttribute("active");
+  const parent = e.currentTarget.parentElement;
+  const content = parent.querySelector(":scope > p");
+  content.classList.toggle("hidden");
+}
 
 function handleHamburgerClick() {
   hamburger.classList.toggle("open");
