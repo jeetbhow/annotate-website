@@ -346,10 +346,6 @@ img, video {
   display: none;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
 .cursor-pointer {
   cursor: pointer;
 }
@@ -459,11 +455,6 @@ img, video {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
-
-.py-1 {
-  padding-top: .25rem;
-  padding-bottom: .25rem;
 }
 
 .py-16 {
@@ -772,6 +763,10 @@ p {
 }
 
 @media (width >= 768px) {
+  .md\:h-screen {
+    height: 100vh;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
